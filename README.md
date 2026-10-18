@@ -22,11 +22,17 @@ A polished realtor-style property listing app built as a portfolio-ready Create 
 
 ## Screenshots
 
-Add screenshots from a local run under `docs/` (or paste into the PR description):
+| Home                           | Listing detail                      |
+| ------------------------------ | ----------------------------------- |
+| ![Home](docs/home-desktop.png) | ![Listing](docs/listing-detail.png) |
 
-| Home                   | Listing detail      | Profile                   |
-| ---------------------- | ------------------- | ------------------------- |
-| _Home hero + listings_ | _Gallery + contact_ | _Account + your listings_ |
+| Offers                     | Profile                      |
+| -------------------------- | ---------------------------- |
+| ![Offers](docs/offers.png) | ![Profile](docs/profile.png) |
+
+| Mobile                               |
+| ------------------------------------ |
+| ![Mobile home](docs/home-mobile.png) |
 
 ## Demo credentials
 
