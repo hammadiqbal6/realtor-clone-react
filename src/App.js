@@ -5,6 +5,7 @@ import { AuthProvider } from './context/AuthContext';
 import { ListingsProvider } from './context/ListingsContext';
 import Layout from './components/Layout';
 import PrivateRoute from './components/PrivateRoute';
+import GuestRoute from './components/GuestRoute';
 import Home from './pages/Home';
 import About from './pages/About';
 import Login from './pages/Login';
@@ -30,9 +31,30 @@ function App() {
               <Route path="/offers" element={<Offers />} />
               <Route path="/category/:categoryName" element={<Category />} />
               <Route path="/category/:categoryName/:listingId" element={<Listing />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/register" element={<Register />} />
-              <Route path="/reset-password" element={<ResetPassword />} />
+              <Route
+                path="/login"
+                element={
+                  <GuestRoute>
+                    <Login />
+                  </GuestRoute>
+                }
+              />
+              <Route
+                path="/register"
+                element={
+                  <GuestRoute>
+                    <Register />
+                  </GuestRoute>
+                }
+              />
+              <Route
+                path="/reset-password"
+                element={
+                  <GuestRoute>
+                    <ResetPassword />
+                  </GuestRoute>
+                }
+              />
               <Route
                 path="/profile"
                 element={
