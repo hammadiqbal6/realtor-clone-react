@@ -34,3 +34,11 @@ yarn-error.log*
 .cache
 .tmp
 temp
+.playwright-mcp/
+
+# local screenshot dumps (keep artifacts elsewhere)
+/home-*.png
+/listing-*.png
+/profile-*.png
+/*.png
+!docs/**/*.png
