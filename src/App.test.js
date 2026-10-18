@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders Harbor Homes brand on the home page', async () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const brands = await screen.findAllByText(/Harbor Homes/i);
+  expect(brands.length).toBeGreaterThan(0);
 });

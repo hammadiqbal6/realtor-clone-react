@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# Harbor Homes — Realtor Clone (React + Tailwind)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A polished realtor-style property listing app built as a portfolio-ready Create React App project. Browse homes for rent or sale, sign in, and manage full listing CRUD — all persisted in the browser with localStorage (no backend required).
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Home feed with hero, recent offers, rentals, and for-sale sections
+- Category pages for rent / sale plus a dedicated Offers page
+- Listing detail with image slider, amenities, contact CTA, and owner actions
+- Auth flows: register, sign in, forgot password, protected profile
+- Create / edit / delete listings with validation and loading / empty / error states
+- Responsive layout (mobile + desktop) with sticky navigation
 
-### `npm start`
+## Tech stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React 18 + Create React App
+- React Router v6
+- Tailwind CSS 3
+- react-toastify, react-icons, uuid
+- Prettier + ESLint (react-app + prettier)
+- GitHub Actions CI (lint, format check, tests, build)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Screenshots
 
-### `npm test`
+Add screenshots from a local run under `docs/` (or paste into the PR description):
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Home                   | Listing detail      | Profile                   |
+| ---------------------- | ------------------- | ------------------------- |
+| _Home hero + listings_ | _Gallery + contact_ | _Account + your listings_ |
 
-### `npm run build`
+## Demo credentials
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+| Field    | Value                  |
+| -------- | ---------------------- |
+| Email    | `demo@harborhomes.dev` |
+| Password | `demo1234`             |
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Seed listings are loaded automatically on first visit.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Setup
 
-### `npm run eject`
+```bash
+npm install
+cp .env.example .env   # optional
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Open [http://localhost:3000](http://localhost:3000).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Scripts
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+| Command                | Description      |
+| ---------------------- | ---------------- |
+| `npm start`            | Dev server       |
+| `npm run build`        | Production build |
+| `npm test`             | Jest (watch)     |
+| `npm run test:ci`      | Jest once (CI)   |
+| `npm run lint`         | ESLint           |
+| `npm run format`       | Prettier write   |
+| `npm run format:check` | Prettier check   |
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Environment variables
 
-## Learn More
+Copy `.env.example` to `.env` if you want to customize the site name:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+REACT_APP_SITE_NAME=Harbor Homes
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+No API keys are required. Auth users and listings are stored in `localStorage` under the `harborhomes.*` keys.
 
-### Code Splitting
+## Project structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+src/
+  components/   # Layout, listing cards, form, slider, states
+  context/      # Auth + listings providers
+  data/         # Seed users & listings
+  pages/        # Route screens
+  services/     # localStorage helpers
+  utils/        # Formatters
+```
 
-### Analyzing the Bundle Size
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+MIT — portfolio / tutorial demo.
