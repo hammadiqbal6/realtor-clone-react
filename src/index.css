@@ -1,3 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --color-ink: #0f1720;
+  --color-slate: #243642;
+  --color-canvas: #ecf1f5;
+  --color-fog: #dce5ec;
+  --color-accent: #0f766e;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    font-family: Manrope, ui-sans-serif, system-ui, sans-serif;
+    background: var(--color-canvas);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--color-accent) 28%, white);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-white transition disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .btn-primary:hover {
+    background-color: #0b5f59;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-full border bg-white px-5 py-2.5 text-sm font-semibold text-ink transition hover:bg-fog disabled:cursor-not-allowed disabled:opacity-60;
+    border-color: rgb(15 23 32 / 0.15);
+  }
+
+  .btn-secondary:hover {
+    border-color: rgb(15 23 32 / 0.3);
+  }
+
+  .field {
+    @apply flex flex-col gap-1.5 text-sm font-medium;
+    color: rgb(15 23 32 / 0.8);
+  }
+
+  .field input,
+  .field textarea {
+    @apply w-full rounded-xl border bg-white px-3.5 py-2.5 text-sm font-normal text-ink outline-none transition focus:border-accent disabled:bg-fog;
+    border-color: rgb(15 23 32 / 0.15);
+  }
+
+  .field input::placeholder,
+  .field textarea::placeholder {
+    color: rgb(15 23 32 / 0.35);
+  }
+
+  .field input:focus,
+  .field textarea:focus {
+    box-shadow: 0 0 0 2px rgb(15 118 110 / 0.2);
+  }
+
+  .field input:disabled,
+  .field textarea:disabled {
+    color: rgb(15 23 32 / 0.5);
+  }
+}
