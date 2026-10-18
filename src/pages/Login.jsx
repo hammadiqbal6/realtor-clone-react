@@ -28,7 +28,7 @@ export default function Login() {
 
   return (
     <section className="relative overflow-hidden px-4 py-14 sm:px-6 sm:py-20">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(196,92,38,0.1),transparent_55%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(15,118,110,0.12),transparent_55%)]" />
       <div className="relative mx-auto grid max-w-5xl items-center gap-10 lg:grid-cols-2">
         <div className="hidden lg:block">
           <img

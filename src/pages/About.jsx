@@ -6,7 +6,7 @@ const siteName = process.env.REACT_APP_SITE_NAME || 'Harbor Homes';
 export default function About() {
   return (
     <section className="relative overflow-hidden">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(196,92,38,0.12),transparent_50%),radial-gradient(ellipse_at_bottom_right,rgba(30,58,76,0.12),transparent_45%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(15,118,110,0.14),transparent_50%),radial-gradient(ellipse_at_bottom_right,rgba(36,54,66,0.14),transparent_45%)]" />
       <div className="relative mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-24">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">About</p>
         <h1 className="mt-3 font-display text-4xl text-ink sm:text-5xl">{siteName}</h1>

@@ -4,11 +4,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        ink: 'rgb(12 27 42 / <alpha-value>)',
-        slateDeep: 'rgb(30 58 76 / <alpha-value>)',
-        canvas: 'rgb(247 243 238 / <alpha-value>)',
-        fog: 'rgb(232 238 242 / <alpha-value>)',
-        accent: 'rgb(196 92 38 / <alpha-value>)',
+        ink: 'rgb(15 23 32 / <alpha-value>)',
+        slateDeep: 'rgb(36 54 66 / <alpha-value>)',
+        canvas: 'rgb(236 241 245 / <alpha-value>)',
+        fog: 'rgb(220 229 236 / <alpha-value>)',
+        accent: 'rgb(15 118 110 / <alpha-value>)',
       },
       fontFamily: {
         sans: ['Manrope', 'ui-sans-serif', 'system-ui', 'sans-serif'],

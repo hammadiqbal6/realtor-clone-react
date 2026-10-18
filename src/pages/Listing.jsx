@@ -85,10 +85,10 @@ export default function Listing() {
 
             <div className="mt-8 flex flex-wrap gap-4 text-sm text-ink/70">
               <span className="inline-flex items-center gap-2 rounded-full bg-fog px-3 py-1.5">
-                <FaBed /> {listing.bedrooms} beds
+                <FaBed /> {listing.bedrooms} {listing.bedrooms === 1 ? 'bed' : 'beds'}
               </span>
               <span className="inline-flex items-center gap-2 rounded-full bg-fog px-3 py-1.5">
-                <FaBath /> {listing.bathrooms} baths
+                <FaBath /> {listing.bathrooms} {listing.bathrooms === 1 ? 'bath' : 'baths'}
               </span>
               <span className="inline-flex items-center gap-2 rounded-full bg-fog px-3 py-1.5">
                 <FaParking /> {listing.parking ? 'Parking' : 'No parking'}
