@@ -1,9 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 
 const siteName = process.env.REACT_APP_SITE_NAME || 'Harbor Homes';
 
 export default function Footer() {
+  const { currentUser } = useAuth();
+
   return (
     <footer className="mt-auto border-t border-ink/10 bg-ink text-canvas">
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:px-6 md:grid-cols-3">
@@ -34,15 +37,28 @@ export default function Footer() {
             Account
           </p>
           <div className="mt-4 flex flex-col gap-2 text-sm text-canvas/80">
-            <Link to="/login" className="hover:text-canvas">
-              Sign in
-            </Link>
-            <Link to="/register" className="hover:text-canvas">
-              Create account
-            </Link>
-            <Link to="/create-listing" className="hover:text-canvas">
-              List a property
-            </Link>
+            {currentUser ? (
+              <>
+                <Link to="/profile" className="hover:text-canvas">
+                  Your profile
+                </Link>
+                <Link to="/create-listing" className="hover:text-canvas">
+                  List a property
+                </Link>
+              </>
+            ) : (
+              <>
+                <Link to="/login" className="hover:text-canvas">
+                  Sign in
+                </Link>
+                <Link to="/register" className="hover:text-canvas">
+                  Create account
+                </Link>
+                <Link to="/create-listing" className="hover:text-canvas">
+                  List a property
+                </Link>
+              </>
+            )}
           </div>
         </div>
       </div>
